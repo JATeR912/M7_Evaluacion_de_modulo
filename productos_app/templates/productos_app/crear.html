@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Nuevo Producto{% endblock %}
+{% block content %}
+<div class="container mt-4">
+  <h2>Nuevo Producto</h2>
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">Guardar</button>
+    <a href="{% url 'lista_productos' %}" class="btn btn-secondary">Cancelar</a>
+  </form>
+</div>
+{% endblock %}
