@@ -1,6 +1,6 @@
 from django.db import models
-from categorias.models import Categoria
-from etiquetas.models import Etiqueta
+from categorias_app.models import Categoria
+from etiquetas_app.models import Etiqueta
 
 # --- MODELO DETALLE DEL PRODUCTO ---
 class Producto(models.Model):
