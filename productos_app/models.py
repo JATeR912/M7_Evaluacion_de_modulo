@@ -2,7 +2,7 @@ from django.db import models
 from categorias_app.models import Categoria
 from etiquetas_app.models import Etiqueta
 
-# --- MODELO DETALLE DEL PRODUCTO ---
+# MODELO PRODUCTO
 class Producto(models.Model):
     nombre = models.CharField(max_length=100)
     descripcion = models.TextField()
@@ -26,7 +26,7 @@ class Producto(models.Model):
         return self.nombre
 
 
-# --- MODELO DETALLE DEL PRODUCTO ---
+# MODELO DETALLE DEL PRODUCTO
 class DetalleProducto(models.Model):
     producto = models.OneToOneField(
         Producto,
