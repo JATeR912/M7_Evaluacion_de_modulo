@@ -33,8 +33,8 @@ class DetalleProducto(models.Model):
         on_delete=models.CASCADE,
         related_name='detalle'
     )
-    dimension = models.CharField(max_length=100)
-    peso = models.DecimalField(max_digits=10, decimal_places=2)
+    dimension = models.CharField(max_length=100, blank=True, default="")
+    peso = models.DecimalField(max_digits=10, decimal_places=2, blank=True, default=0)
 
     def __str__(self):
         return f"Detalle de {self.producto.nombre}"

@@ -34,8 +34,8 @@ def crear_producto(request):
             # Crear detalles del producto
             DetalleProducto.objects.create(
                 producto=producto,
-                dimension=form.cleaned_data['dimension'],
-                peso=form.cleaned_data['peso']
+                dimension=form.cleaned_data['dimension'] or "",
+                peso=form.cleaned_data['peso'] or 0
             )
 
             form.save_m2m()  
@@ -66,8 +66,8 @@ def editar_producto(request, id):
             else:
                 DetalleProducto.objects.create(
                     producto=producto,
-                    dimension=form.cleaned_data['dimension'],
-                    peso=form.cleaned_data['peso']
+                    dimension=form.cleaned_data['dimension'] or "",
+                    peso=form.cleaned_data['peso'] or 0
                 )
 
             form.save_m2m()
