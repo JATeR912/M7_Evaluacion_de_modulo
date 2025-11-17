@@ -29,7 +29,7 @@ Este proyecto es una aplicación web desarrollada en **Django 5.2.7** que permit
 ## 🖼 Capturas de pantalla
 
 ### Página principal
-![Index](assets/index.jpg)
+![Index](assets/index.png)
 
 ### Panel de administración Django
 ![Admin Django](assets/admin-django.gif)
