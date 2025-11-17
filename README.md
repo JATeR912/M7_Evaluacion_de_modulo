@@ -90,7 +90,26 @@ venv\Scripts\activate     # Windows
 pip install -r requirements.txt
 ```
 
-3. Migrar la base de datos:
+3. Configurar y migrar la base de datos:
+
+- Crear la base de datos en PostgreSQL con el nombre que usarás.
+
+- Abrir `settings.py` y modificar la sección `DATABASES` con tu nombre de base de datos, usuario y contraseña:
+
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'nombre_de_tu_bd',
+        'USER': 'tu_usuario',
+        'PASSWORD': 'tu_contraseña',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+```
+
+- Luego aplicar las migraciones:
 
 ```bash
 python manage.py makemigrations
