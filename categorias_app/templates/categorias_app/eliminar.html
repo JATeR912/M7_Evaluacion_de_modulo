@@ -4,7 +4,7 @@
 {% block content %}
 <div class="container mt-4">
   <h2>¿Deseas eliminar esta categoría?</h2>
-  <p><strong>{{ categoria.nombre }}</strong></p>
+  <p><strong>SI SE ELIMINA LA CATEGORIA "{{ categoria.nombre }}" SE ELIMINARAN TODOS LOS PRODUCTOS ASOCIADOS</strong></p>
 
   <form method="post">
     {% csrf_token %}
